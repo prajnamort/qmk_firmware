@@ -114,6 +114,8 @@ extern const uint16_t fn_actions[];
 
 #define KC_PLUS LSFT(KC_EQL)    // +
 
+#define KC_PIPE LSFT(KC_BSLS)   // |
+
 #define KC_LCBR LSFT(KC_LBRC)   // {
 #define KC_LEFT_CURLY_BRACE KC_LCBR
 
@@ -123,7 +125,17 @@ extern const uint16_t fn_actions[];
 #define KC_COLN LSFT(KC_SCLN)   // :
 #define KC_COLON    KC_COLN
 
-#define KC_PIPE LSFT(KC_BSLS)   // |
+#define KC_DQUT LSFT(KC_QUOT)   // "
+#define KC_DOUBLE_QUOTE  KC_DQUT
+
+#define KC_LTHN LSFT(KC_COMM)   // <
+#define KC_LESS_THAN  KC_LTHN
+
+#define KC_GTHN LSFT(KC_DOT)    // >
+#define KC_GREATER_THAN  KC_GTHN
+
+#define KC_QSMK LSFT(KC_SLSH)   // ?
+#define KC_QUESTION_MARK  KC_QSMK
 
 #define KC_DELT KC_DELETE // Del key (four letter code)
 
