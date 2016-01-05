@@ -16,9 +16,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |  LCTL  |   A  |   O  |   E  |   I  |   U  |------|           |------|   H  |   R  |   T  |   N  |   S  |   -    |
  * |--------+------+------+------+------+------| Hyper|           |  Meh |------+------+------+------+------+--------|
- * |  LSFT  |   Z  |   Q  |   X  |   K  |   J  |      |           |      |   F  |   D  |   M  |   W  |   V  |  LSFT  |
+ * |  LSFT  |   Z  |   Q  |   X  |   K  |   J  |      |           |      |   F  |   D  |   M  |   W  |   V  |  RSFT  |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   | LCTL | LALT |;/LGUI|   /  |  ~L1 |                                       |  ~L1 |   =  |\/LGUI| LALT | LCTL |
+ *   | LCTL | LALT |;/LGUI|   /  |  ~L1 |                                       |  ~L1 |   =  |\/LGUI| RALT | RCTL |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        | Esc  | PScr |       |      |      |
@@ -44,8 +44,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TG(MEDIA),  KC_6,     KC_7,       KC_8,    KC_9,     KC_0,     KC_DELT,
         MO(MEDIA),  KC_RPRN,  KC_B,       KC_C,    KC_L,     KC_G,     KC_PLUS,
                     KC_H,     KC_R,       KC_T,    KC_N,     KC_S,     KC_MINS,
-        KC_MEH,     KC_F,     KC_D,       KC_M,    KC_W,     KC_V,     KC_LSFT,
-                              MO(CODER),  KC_EQL,  GUI_T(KC_BSLS), KC_LALT,  KC_LCTL,
+        KC_MEH,     KC_F,     KC_D,       KC_M,    KC_W,     KC_V,     KC_RSFT,
+                              MO(CODER),  KC_EQL,  GUI_T(KC_BSLS), KC_RALT,  KC_RCTL,
         KC_NO,      KC_NO,
         KC_PGUP,
         KC_PGDN,    KC_BSPC,   KC_ENT
