@@ -12,16 +12,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * | LCTL+V |   1  |   2  |   3  |   4  |   5  |LCTL+C|           |  L2  |   6  |   7  |   8  |   9  |   0  |   DEL  |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * |    _   |   ,  |   .  |   P  |   Y  |   (  |  ~L2 |           |  ~L2 |   )  |   B  |   C  |   L  |   G  |   +    |
+ * |    _   |   ,  |   .  |   P  |   Y  |   (  | Hyper|           | Hyper|   )  |   B  |   C  |   L  |   G  |   +    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |  LCTL  |   A  |   O  |   E  |   I  |   U  |------|           |------|   H  |   R  |   T  |   N  |   S  |   -    |
- * |--------+------+------+------+------+------| Hyper|           |  Meh |------+------+------+------+------+--------|
+ * |--------+------+------+------+------+------|  CAG |           |  CAG |------+------+------+------+------+--------|
  * |  LSFT  |   Z  |   Q  |   X  |   K  |   J  |      |           |      |   F  |   D  |   M  |   W  |   V  |  RSFT  |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   | LCTL | LALT |;/LGUI|   /  |  ~L1 |                                       |  ~L1 |   =  |\/LGUI| RALT | RCTL |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        | Esc  | PScr |       |      |      |
+ *                                        | Esc  | PScr |       |      |  L2  |
  *                                 ,------|------|------|       |------+--------+------.
  *                                 |      |      | Home |       | PgUp |        |      |
  *                                 | Space|  Tab |------|       |------| Back   |Enter |
@@ -33,20 +33,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [BASE] = KEYMAP(  // layer 0 : default
         // left hand
         LCTL(KC_V), KC_1,     KC_2,            KC_3,     KC_4,     KC_5,      LCTL(KC_C),
-        KC_UNDS,    KC_COMM,  KC_DOT,          KC_P,     KC_Y,     KC_LPRN,   MO(MEDIA),
+        KC_UNDS,    KC_COMM,  KC_DOT,          KC_P,     KC_Y,     KC_LPRN,   KC_HYPR,
         KC_LCTL,    KC_A,     KC_O,            KC_E,     KC_I,     KC_U,
-        KC_LSFT,    KC_Z,     KC_Q,            KC_X,     KC_K,     KC_J,      KC_HYPR,
+        KC_LSFT,    KC_Z,     KC_Q,            KC_X,     KC_K,     KC_J,      KC_CAG,
         KC_LCTL,    KC_LALT,  GUI_T(KC_SCLN),  KC_SLSH,  MO(CODER),
                                                                   KC_ESC,    KC_PSCR,
                                                                              KC_HOME,
                                                         KC_SPC,   KC_TAB,    KC_END,
         // right hand
         TG(MEDIA),  KC_6,     KC_7,       KC_8,    KC_9,     KC_0,     KC_DELT,
-        MO(MEDIA),  KC_RPRN,  KC_B,       KC_C,    KC_L,     KC_G,     KC_PLUS,
+        KC_HYPR,  KC_RPRN,  KC_B,       KC_C,    KC_L,     KC_G,     KC_PLUS,
                     KC_H,     KC_R,       KC_T,    KC_N,     KC_S,     KC_MINS,
-        KC_MEH,     KC_F,     KC_D,       KC_M,    KC_W,     KC_V,     KC_RSFT,
+        KC_CAG,     KC_F,     KC_D,       KC_M,    KC_W,     KC_V,     KC_RSFT,
                               MO(CODER),  KC_EQL,  GUI_T(KC_BSLS), KC_RALT,  KC_RCTL,
-        KC_NO,      KC_NO,
+        KC_NO,      TG(MEDIA),
         KC_PGUP,
         KC_PGDN,    KC_BSPC,   KC_ENT
 ),
