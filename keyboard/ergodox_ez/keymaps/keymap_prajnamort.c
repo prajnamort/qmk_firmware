@@ -18,14 +18,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|  CAG |           |  CAG |------+------+------+------+------+--------|
  * |    _   |   Z  |   Q  |   X  |   K  |   J  |      |           |      |   F  |   D  |   M  |   W  |   V  |    -   |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   | LALT |   ;  |   '  |   /  |  ~L1 |                                       |  ~L1 |=/LGUI|   "  |   :  | RALT |
+ *   | LALT |   ;  |   '  |   /  |  ~L1 |                                       |  ~L1 |   =  |   "  |   :  | RALT |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        |  C-c |  C-v |       | Home |  End |
  *                                 ,------|------|------|       |------+--------+------.
- *                                 |      |      |  C_S |       |  C_G |        |      |
+ *                                 |      |      |  C_S |       |  C_A |        |      |
  *                                 | Space| LCTL |------|       |------| Back   |Enter |
- *                                 |      |      | LALT |       |  C_A | space  |      |
+ *                                 |      |      | LALT |       | LGUI | space  |      |
  *                                 `--------------------'       `----------------------'
  */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
@@ -41,14 +41,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                          KC_C_S,
                                                    KC_SPC,   KC_LCTL,    KC_LALT,
         // right hand
-        TG(MEDIA),  KC_6,     KC_7,       KC_8,          KC_9,    KC_0,     KC_DELT,
-        KC_PGDN,    KC_RPRN,  KC_B,       KC_C,          KC_L,    KC_G,     KC_PLUS,
-                    KC_H,     KC_R,       KC_T,          KC_N,    KC_S,     KC_RSFT,
-        KC_CAG,     KC_F,     KC_D,       KC_M,          KC_W,    KC_V,     KC_MINS,
-                              MO(CODER),  GUI_T(KC_EQL), KC_DQUT, KC_COLN,  KC_RALT,
+        TG(MEDIA),  KC_6,     KC_7,       KC_8,      KC_9,    KC_0,     KC_DELT,
+        KC_PGDN,    KC_RPRN,  KC_B,       KC_C,      KC_L,    KC_G,     KC_PLUS,
+                    KC_H,     KC_R,       KC_T,      KC_N,    KC_S,     KC_RSFT,
+        KC_CAG,     KC_F,     KC_D,       KC_M,      KC_W,    KC_V,     KC_MINS,
+                              MO(CODER),  KC_EQL,    KC_DQUT, KC_COLN,  KC_RALT,
         KC_HOME,    KC_END,
-        KC_C_G,
-        KC_C_A,    KC_BSPC,   KC_ENT
+        KC_C_A,
+        KC_LGUI,    KC_BSPC,   KC_ENT
 ),
 /* Keymap 1: Coder layer
  *
