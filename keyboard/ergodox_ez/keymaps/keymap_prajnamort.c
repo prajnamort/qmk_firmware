@@ -23,9 +23,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                        ,-------------.       ,-------------.
  *                                        |  C-c |  C-v |       | Home |  End |
  *                                 ,------|------|------|       |------+--------+------.
- *                                 |      |      |  C_S |       |  C_A |        |      |
+ *                                 |      |      | LALT |       | RALT |        |      |
  *                                 | Space| LCTL |------|       |------| Back   |Enter |
- *                                 |      |      | LALT |       | LGUI | space  |      |
+ *                                 |      |      | LGUI |       | RGUI | space  |      |
  *                                 `--------------------'       `----------------------'
  */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
@@ -38,8 +38,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_UNDS,    KC_Z,     KC_Q,      KC_X,     KC_K,     KC_J,       KC_CAG,
         KC_LALT,    KC_SCLN,  KC_QUOT,   KC_SLSH,  MO(CODER),
                                                              LCTL(KC_C), LCTL(KC_V),
-                                                                         KC_C_S,
-                                                   KC_SPC,   KC_LCTL,    KC_LALT,
+                                                                         KC_LALT,
+                                                   KC_SPC,   KC_LCTL,    KC_LGUI,
         // right hand
         TG(MEDIA),  KC_6,     KC_7,       KC_8,      KC_9,    KC_0,     KC_DELT,
         KC_PGDN,    KC_RPRN,  KC_B,       KC_C,      KC_L,    KC_G,     KC_PLUS,
@@ -47,8 +47,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_CAG,     KC_F,     KC_D,       KC_M,      KC_W,    KC_V,     KC_MINS,
                               MO(CODER),  KC_EQL,    KC_DQUT, KC_COLN,  KC_RALT,
         KC_HOME,    KC_END,
-        KC_C_A,
-        KC_LGUI,    KC_BSPC,   KC_ENT
+        KC_RALT,
+        KC_RGUI,    KC_BSPC,   KC_ENT
 ),
 /* Keymap 1: Coder layer
  *
