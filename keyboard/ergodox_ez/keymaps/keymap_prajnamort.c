@@ -12,7 +12,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * |   Esc  |   1  |   2  |   3  |   4  |   5  | PScr |           |  L2  |   6  |   7  |   8  |   9  |   0  |   Del  |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * |   Tab  |   ,  |   .  |   P  |   Y  |   (  | PgUp |           | PgDn |   )  |   B  |   C  |   L  |   G  |    +   |
+ * |   Tab  |   ,  |   .  |   P  |   Y  |   (  | G-Sp |           | G-Sp |   )  |   B  |   C  |   L  |   G  |    +   |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |  LSFT  |   A  |   O  |   E  |   I  |   U  |------|           |------|   H  |   R  |   T  |   N  |   S  |  RSFT  |
  * |--------+------+------+------+------+------|  CAG |           |  CAG |------+------+------+------+------+--------|
@@ -33,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [BASE] = KEYMAP(  // layer 0 : default
         // left hand
         KC_ESC,     KC_1,     KC_2,      KC_3,     KC_4,     KC_5,       KC_PSCR,
-        KC_TAB,     KC_COMM,  KC_DOT,    KC_P,     KC_Y,     KC_LPRN,    KC_PGUP,
+        KC_TAB,     KC_COMM,  KC_DOT,    KC_P,     KC_Y,     KC_LPRN,    LGUI(KC_SPC),
         KC_LSFT,    KC_A,     KC_O,      KC_E,     KC_I,     KC_U,
         KC_UNDS,    KC_Z,     KC_Q,      KC_X,     KC_K,     KC_J,       KC_CAG,
         KC_LALT,    KC_SCLN,  KC_QUOT,   KC_SLSH,  MO(CODER),
@@ -41,14 +41,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                          KC_LALT,
                                                    KC_SPC,   KC_LCTL,    KC_LGUI,
         // right hand
-        TG(MEDIA),  KC_6,     KC_7,       KC_8,      KC_9,    KC_0,     KC_DELT,
-        KC_PGDN,    KC_RPRN,  KC_B,       KC_C,      KC_L,    KC_G,     KC_PLUS,
-                    KC_H,     KC_R,       KC_T,      KC_N,    KC_S,     KC_RSFT,
-        KC_CAG,     KC_F,     KC_D,       KC_M,      KC_W,    KC_V,     KC_MINS,
+        TG(MEDIA),    KC_6,     KC_7,       KC_8,      KC_9,    KC_0,     KC_DELT,
+        LGUI(KC_SPC), KC_RPRN,  KC_B,       KC_C,      KC_L,    KC_G,     KC_PLUS,
+                      KC_H,     KC_R,       KC_T,      KC_N,    KC_S,     KC_RSFT,
+        KC_CAG,       KC_F,     KC_D,       KC_M,      KC_W,    KC_V,     KC_MINS,
                               MO(CODER),  KC_EQL,    KC_DQUT, KC_COLN,  KC_RALT,
-        KC_HOME,    KC_END,
+        KC_HOME,      KC_END,
         KC_RALT,
-        KC_RGUI,    KC_BSPC,   KC_ENT
+        KC_RGUI,      KC_BSPC,   KC_ENT
 ),
 /* Keymap 1: Coder layer
  *
@@ -59,7 +59,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |        |   ~  |   |  |   [  |   ]  |      |------|           |------|      | LEFT | DOWN | RGHT |      |        |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |        |      |   `  |   <  |   >  |      |      |           |      |      |      |      |      |      |        |
+ * |        |      |   `  |   <  |   >  |      |      |           |      |      |   PU |      |   PD |      |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |      |      |      |      |      |                                       |      |      |      |      |      |
  *   `----------------------------------'                                       `----------------------------------'
@@ -85,7 +85,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_TRNS, KC_F6,   KC_F7,         KC_F8,   KC_F9,         KC_F10,  KC_F11,
        KC_TRNS, KC_TRNS, LCTL(KC_PGUP), KC_UP,   LCTL(KC_PGDN), KC_TRNS, KC_F12,
                 KC_TRNS, KC_LEFT,       KC_DOWN, KC_RGHT,       KC_TRNS, KC_TRNS,
-       KC_TRNS, KC_TRNS, KC_TRNS,       KC_TRNS, KC_TRNS,       KC_TRNS, KC_TRNS,
+       KC_TRNS, KC_TRNS, KC_PGUP,       KC_TRNS, KC_PGDN,       KC_TRNS, KC_TRNS,
                          KC_TRNS,       KC_TRNS, KC_TRNS,       KC_TRNS, KC_TRNS,
        KC_TRNS, KC_TRNS,
        KC_TRNS,
