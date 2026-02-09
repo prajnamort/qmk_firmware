@@ -199,7 +199,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
             // Prajnamort: these combined keys needs to be slowed down
             case C_SPC:
-                SEND_STRING(SS_DOWN(X_LCTL) SS_DELAY(80) SS_DOWN(X_SPC) SS_UP(X_SPC) SS_DELAY(20) SS_UP(X_LCTL));
+                SEND_STRING(SS_DOWN(X_LCTL) SS_DELAY(80) SS_DOWN(X_SPC) SS_DELAY(60) SS_UP(X_SPC) SS_DELAY(20) SS_UP(X_LCTL));
                 return false;
             case A_SPC:
                 SEND_STRING(SS_DOWN(X_LALT) SS_DELAY(80) SS_DOWN(X_SPC) SS_UP(X_SPC) SS_DELAY(20) SS_UP(X_LALT));
